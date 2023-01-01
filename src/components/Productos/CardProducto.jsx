@@ -1,26 +1,23 @@
-import React from 'react';
-import { formatPrice } from '../../utils/index';
+import React from "react";
+import { formatPrice } from "../../utils/index";
 
-import Button from '../UI/Button/Button';
+import Button from "../UI/Button/Button";
 
 import {
   CardPrice,
   ContainerPrice,
   ProductosCard,
-} from './CardsProductosStyles';
+} from "./CardsProductosStyles";
 
-const CardProducto = () => {
+const CardProducto = ({ img, title, desc, price }) => {
   return (
     <ProductosCard>
-      <img
-        src='https://res.cloudinary.com/dcatzxqqf/image/upload/v1656648456/coding/NucbaZappi/Productos/muzza-mentolada_fmh9at.png'
-        alt='La Aco'
-      />
-      <h2>La Aco</h2>
-      <p>Cheta la gorra</p>
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <p>{desc}</p>
       <ContainerPrice>
-        <CardPrice>{formatPrice(3000)}</CardPrice>
-        <Button onClick={e => e.preventDefault()}>Agregar</Button>
+        <CardPrice>{formatPrice(price)}</CardPrice>
+        <Button onClick={(e) => e.preventDefault()}>Agregar</Button>
       </ContainerPrice>
     </ProductosCard>
   );

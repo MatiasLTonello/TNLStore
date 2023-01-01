@@ -1,21 +1,30 @@
-import React from 'react';
+import React from "react";
+import { Stack } from "@mui/material";
 
-import { BorderDecoration, CardCategoria } from './CategoriasStyles';
+import { BorderDecoration, CardCategoria } from "./CategoriasStyles";
 
-export const Categoria = () => {
+export const Categoria = ({ img, title }) => {
   return (
-    <CardCategoria
-      selected={false}
-      onClick={e => e.preventDefault()}
-      whileTap={{ scale: 0.95 }}
-    >
-      <img
-        src='https://res.cloudinary.com/dcatzxqqf/image/upload/v1656648466/coding/NucbaZappi/Categorias/hamburguesa_faykp7.png'
-        alt='Hamburguesas'
-      />
-      <h2>Hamburguesas</h2>
-      <BorderDecoration></BorderDecoration>
-    </CardCategoria>
+    <Stack w={"100%"} height="100%">
+      <CardCategoria
+        selected={false}
+        onClick={(e) => e.preventDefault()}
+        whileTap={{ scale: 0.95 }}
+      >
+        <Stack minWidth="20%" height="80px">
+          <img
+            src={img}
+            alt={title}
+            widht="100%"
+            height={"100%"}
+            object-fit="cover"
+          />
+        </Stack>
+
+        <h2>{title}</h2>
+        <BorderDecoration></BorderDecoration>
+      </CardCategoria>
+    </Stack>
   );
 };
 

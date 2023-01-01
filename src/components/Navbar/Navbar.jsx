@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 
-import { FaUserAlt } from 'react-icons/fa';
-import { HiHome } from 'react-icons/hi';
+import { FaUserAlt } from "react-icons/fa";
+import { HiHome } from "react-icons/hi";
 
-import ModalCart from './ModalCart/ModalCart';
-import ModalUser from './ModalUser/ModalUser';
-import CartIcon from './CartIcon/CartIcon';
+import ModalCart from "./ModalCart/ModalCart";
+import ModalUser from "./ModalUser/ModalUser";
+import CartIcon from "./CartIcon/CartIcon";
 
 import {
   CartNavStyled,
@@ -17,7 +17,7 @@ import {
   UserNavStyled,
   UserContainerStyled,
   SpanStyled,
-} from './NavbarStyles';
+} from "./NavbarStyles";
 
 function Navbar() {
   const [hiddenCart, setHiddenCart] = useState(true);
@@ -29,16 +29,16 @@ function Navbar() {
       <ModalCart hiddenCart={hiddenCart} setHiddenCart={setHiddenCart} />
       <ModalUser />
       <div>
-        <Link to='/'>
+        <Link to="/">
           <img
-            src='https://res.cloudinary.com/dcatzxqqf/image/upload/v1658797659/coding/NucbaZappi/Assets/nucba-zappi-icon_oe3ark_xmvab5.png'
-            alt='Logo'
+            src="https://www.bairesit.com.ar/Pubs/Sites/site_1/Config/logo-white.png"
+            alt="Logo"
           />
         </Link>
       </div>
       <LinksContainerStyled>
         <motion.div whileTap={{ scale: 0.97 }}>
-          <Link to='/'>
+          <Link to="/">
             <LinkContainerStyled home>
               <HiHome />
             </LinkContainerStyled>
@@ -51,7 +51,7 @@ function Navbar() {
         </CartNavStyled>
 
         <UserNavStyled>
-          <UserContainerStyled onClick={() => navigate('/register')}>
+          <UserContainerStyled onClick={() => navigate("/register")}>
             <SpanStyled>Inicia sesión</SpanStyled>
             <FaUserAlt />
           </UserContainerStyled>

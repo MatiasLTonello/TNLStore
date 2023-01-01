@@ -4,10 +4,10 @@ export const GlobalStyles = createGlobalStyle`
 
     :root {
     --orange-bg: #2f2618;
-    --orange: #ff9d01;
+    --orange: #001E3C;
     --magenta: #FF005C;
     --gray-bg: #2b2b2c;
-  --btn-gradient: linear-gradient(83deg, #ffa100, #fb103d);
+  --btn-gradient: linear-gradient(83deg, #000, #66B2FF);
   --btn-gradient-secondary: linear-gradient(140deg, #3B3022, #3B2329);
   }
 
@@ -18,8 +18,8 @@ export const GlobalStyles = createGlobalStyle`
     body {
     margin: 0;
     padding: 0;
-    background: ##F8F8F8;
-    font-family: 'Montserrat', sans-serif;
+    background: #001428 ;
+    font-family: 'Poppins', sans-serif;
     color: white;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden

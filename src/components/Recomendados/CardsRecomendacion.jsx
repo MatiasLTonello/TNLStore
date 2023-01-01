@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import CardRecomendacion from './CardRecomendacion';
+import CardRecomendacion from "./CardRecomendacion";
 
-import { CardsContainer } from './CardsRecomendacionStyled';
+import { CardsContainer } from "./CardsRecomendacionStyled";
+import { Recommended } from "../../data";
 
 const CardsRecomendacion = () => {
   return (
     <CardsContainer gridLength={4}>
-      <CardRecomendacion />
-      <CardRecomendacion />
-      <CardRecomendacion />
-      <CardRecomendacion />
+      {Recommended.map((product) => (
+        <CardRecomendacion key={product.id} {...product}></CardRecomendacion>
+      ))}
     </CardsContainer>
   );
 };
