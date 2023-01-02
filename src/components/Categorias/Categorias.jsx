@@ -8,6 +8,7 @@ const Categorias = () => {
   const { selectedCategory, categories } = useSelector(
     (state) => state.categories
   );
+  console.log(categories);
   return (
     <CategoriasContainer>
       {categories.map((category) => (

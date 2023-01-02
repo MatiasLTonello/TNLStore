@@ -4,15 +4,20 @@ import Button from "../UI/Button/Button";
 import { ProductosContainer } from "./CardsProductosStyles";
 import { ButtonContainerStyled } from "../../pages/Home/HomeStyles";
 import { Products } from "../../data";
+import { useSelector } from "react-redux";
 
 const CardsProductos = () => {
+  const { selectedCategory } = useSelector((store) => store.categories);
+  const { products } = useSelector((store) => store.products);
   return (
     <>
       <ProductosContainer>
-        {Object.entries(Products).map(([_category, foods]) =>
-          foods.map((food) => (
-            <CardProducto key={food.id} {...food}></CardProducto>
-          ))
+        {Object.entries(products).map(([_category, foods]) =>
+          _category === selectedCategory || !selectedCategory
+            ? foods.map((food) => (
+                <CardProducto key={food.id} {...food}></CardProducto>
+              ))
+            : []
         )}
       </ProductosContainer>
 

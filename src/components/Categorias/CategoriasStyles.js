@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const CategoriasContainer = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ export const CardCategoria = styled(motion.div)`
   padding: 2rem 0.5rem;
 
   background-color: ${({ selected }) =>
-    selected ? 'var(--orange-bg)' : 'var(--gray-bg)'};
+    selected ? "var(--orange-bg)" : "var(--gray-bg)"};
   border-radius: 15px;
   cursor: pointer;
 
