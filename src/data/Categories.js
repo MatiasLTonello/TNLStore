@@ -1,9 +1,9 @@
 export const Categories = [
   {
     id: 1,
-    img: "https://static.wixstatic.com/media/c837a6_3cdf768b62ee4507baa4707a9beb4c0c~mv2.png/v1/fill/w_700,h_958,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Untitled-2fdsf.png",
-    title: "Phones",
-    category: "Phones",
+    img: "https://redragon.es/content/uploads/2022/05/storm-pro-png.png",
+    title: "Mouses",
+    category: "Mouses",
   },
   {
     id: 2,
